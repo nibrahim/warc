@@ -316,7 +316,7 @@ class ARCFile(object):
         # print "--------------------------------------------------"
         # print header,"\n", payload1, "\n", payload2,"\n"
         # print "--------------------------------------------------"
-        if self.version and int(self.version) != version:
+        if self.version and int(self.version) != int(version):
             raise IOError("Version mismatch. Requested version was '%s' but version in file was '%s'"%(self.version, version))
         
         if version == '1':
